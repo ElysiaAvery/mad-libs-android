@@ -23,15 +23,15 @@ public class MainActivityInstrumentationTest {
 
     @Test
     public void validateEditText() {
-        onView(withId(R.id.noun)).perform(typeText("pickle"))
+        onView(withId(R.id.adjective)).perform(typeText("pickle"))
                 .check(matches(withText("pickle")));
     }
 
     @Test
     public void nounIsSentToStoryActivity() {
         String [] userWords = new String [] {"pickle", "egg", "tofu", "biscuit"};
-        onView(withId(R.id.noun)).perform(typeText(userWords[0]));
-        onView(withId(R.id.verb)).perform(typeText(userWords[1]));
+        onView(withId(R.id.adjective)).perform(typeText(userWords[0]));
+        onView(withId(R.id.gerund)).perform(typeText(userWords[1]));
         onView(withId(R.id.name)).perform(typeText(userWords[2]));
         onView(withId(R.id.color)).perform(typeText(userWords[3]));
         onView(withId(R.id.submitWords)).perform(click());

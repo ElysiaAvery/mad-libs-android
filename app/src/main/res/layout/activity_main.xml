@@ -24,7 +24,7 @@
         android:paddingTop="5dp"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/title"
-        android:id="@+id/noun"
+        android:id="@+id/adjective"
         android:hint="An adjective"
         android:gravity="center"/>
 
@@ -33,8 +33,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/noun"
-        android:id="@+id/verb"
+        android:layout_below="@+id/adjective"
+        android:id="@+id/gerund"
         android:hint="A gerund"
         android:gravity="center"/>
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/verb"
+        android:layout_below="@+id/gerund"
         android:id="@+id/name"
         android:hint="Your name"
         android:gravity="center"/>
