@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import butterknife.Bind;
@@ -19,6 +20,25 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.name) EditText mName;
     @Bind(R.id.color) EditText mColor;
     @Bind(R.id.submitWords) Button mSubmitWords;
+    int radioValue=0;
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_story1:
+                if (checked)
+                    radioValue = 0;
+                break;
+            case R.id.radio_story2:
+                if (checked)
+                    radioValue = 1;
+                break;
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mSubmitWords.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 String adjective = mAdjective.getText().toString();
                 String gerund = mGerund.getText().toString();
@@ -40,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 String [] userWords = new String [] {adjective, gerund, name, color};
                 Intent intent = new Intent(MainActivity.this, StoryActivity.class);
                 intent.putExtra("userWords", userWords);
+                intent.putExtra("radioValue", radioValue);
                 startActivity(intent);
                 mAdjective.setText("");
                 mGerund.setText("");

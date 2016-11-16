@@ -65,6 +65,25 @@
         android:textSize="20dp"
         android:paddingTop="5dp"
         android:layout_marginTop="15dp"
-        android:layout_below="@id/color"
+        android:layout_below="@id/radio"
         android:id="@+id/submitWords"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color"
+        android:id="@+id/radio"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton android:id="@+id/radio_story1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story 1"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_story2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story 2"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
 </RelativeLayout>
