@@ -26,7 +26,9 @@
         android:layout_below="@+id/title"
         android:id="@+id/adjective"
         android:hint="An adjective"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -36,7 +38,9 @@
         android:layout_below="@+id/adjective"
         android:id="@+id/gerund"
         android:hint="A gerund"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -46,7 +50,9 @@
         android:layout_below="@+id/gerund"
         android:id="@+id/name"
         android:hint="Your name"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -56,17 +62,9 @@
         android:layout_below="@+id/name"
         android:id="@+id/color"
         android:hint="Your favorite color"
-        android:gravity="center"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textSize="20dp"
-        android:paddingTop="5dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/radio"
-        android:id="@+id/submitWords"/>
+        android:gravity="center"
+        android:singleLine="true"
+        android:imeOptions="actionNext"/>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -86,4 +84,14 @@
             android:text="Story 2"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/radio"
+        android:id="@+id/submitWords"/>
 </RelativeLayout>

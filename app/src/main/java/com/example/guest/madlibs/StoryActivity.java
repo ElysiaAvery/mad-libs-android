@@ -27,7 +27,7 @@ public class StoryActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String [] userWords = intent.getStringArrayExtra("userWords");
-        int radioValue = intent.getIntExtra("radioValue", 0 );
+        int radioValue = intent.getIntExtra("radioValue", 0);
 
         String storyText = String.format(mStory[radioValue], userWords[2], userWords[1], userWords[0], userWords[3]);
         mStoryTextView.setText(storyText);

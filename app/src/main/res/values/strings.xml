@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MadLibs</string>
     <string-array name="story_choices">
-        <item>"One day %1$s  was %2$s and they saw a %3$s cat. The cat cast a spell and turned %1$s %4$s."</item>
+        <item>"One day %1$s was %2$s and they saw a %3$s cat. The cat cast a spell and turned %1$s %4$s."</item>
         <item>"Once upon a time %1$s lived by themselves. They loved %2$s. But, one day while they were %2$s they had a vision of a %3$s %4$s pickle. %1$s was so upset they started %2$s home and never went %2$s again... :("</item>
     </string-array>
 </resources>
